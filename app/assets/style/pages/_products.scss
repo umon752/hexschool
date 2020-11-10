@@ -1,0 +1,156 @@
+.products__nav {
+    max-width: 1386px;
+    width: 100%;
+    margin: 0 auto;
+    li {
+        border: 1px solid #DCDCDC;
+    }
+    img {
+        height: 48px;
+        @include lg {
+            height: 32px;
+        }
+        @include md {
+            height: 14px;
+        }
+    }
+    a {
+        padding: 24px 0;
+        position: relative;
+        font-size: 42px;
+        @include lg {
+            padding: 16px 0;
+            font-size: 28px;
+        }
+        @include md {
+            padding: 8px 0;
+            font-size: $font-size-s;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            border-bottom: 16px solid $primary;
+            width: 0;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s;
+            @include lg {
+                border-bottom-width: 8px;
+            }
+            @include md {
+                border-bottom-width: 4px;
+            }
+        }
+        &:hover::before {
+            width: 100%;
+            transition: 0.5s;
+            opacity: 1;
+        }
+    }
+    .active > a::before {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+
+.products__banner {
+    &__optical--item1,&__optical--item2,&__sun--item1,&__sun--item2 {
+        height: 309px;
+        width: 100%;
+        @include bg-cover;
+        @include md {
+            height: 144px;
+        }
+    }
+    &__optical--item1 {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-1.png");
+        margin-right: 15px;
+        @include lg {
+            margin-right: 0;
+        }
+    }
+    &__optical--item2 {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-2.png");
+        margin-left: 15px;
+        @include lg {
+            margin-left: 0;
+        }
+    }
+    &__sun--item1 {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week4/banner-3.png");
+        margin-right: 15px;
+        @include lg {
+            margin-right: 0;
+        }
+    }
+    &__sun--item2 {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png");
+        margin-left: 15px;
+        @include lg {
+            margin-left: 0;
+        }
+    }
+}
+
+.products {
+    padding: 88px 0 156px 0;
+    @include lg {
+        padding: 40px 0 104px 0;
+    }
+    @include md {
+        padding: 30px 0 56px 0;
+    }
+}
+
+.products__list {
+    margin-bottom: 100px;
+    @include lg {
+        margin-bottom: 105px;
+    }
+    @include md {
+        margin-bottom: $spacer-10;
+    }
+    &__title {
+        font-size: 42px;
+        font-weight: $font-weight-medium;
+        text-align: center;
+        @include lg {
+            font-size: $font-size-h4;
+        }
+        @include md {
+            font-size: $font-size-h6;
+        }
+    }
+    &__content {
+        margin-bottom: 104px;
+        width: 100%;
+        @include lg {
+            margin-bottom: 72px;
+        }
+        @include md {
+            margin-bottom: $spacer-8;
+        }
+        a {
+            color: black;
+        }
+    }
+    &__content--color {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        margin-right: 8px;
+        @include md {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+        }
+        &:nth-child(1) {
+            background:#5F3E2D;
+        }
+        &:nth-child(2) {
+            background:#B75929;
+        }
+    }
+}

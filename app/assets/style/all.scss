@@ -1,0 +1,58 @@
+@import "config/variable";
+@import "config/reset";
+@import "config/mixin";
+@import "config/base";
+
+@import "grid/grid";
+
+@import "helpers/utilities";
+@import "helpers/spacing";
+@import "modules/btn";
+@import "modules/card";
+@import "modules/pagination";
+
+@import "layout/header";
+@import "layout/footer";
+@import "pages/index";
+@import "pages/products";
+@import "pages/location";
+@import "pages/faq";
+@import "pages/blog";
+@import "pages/blog_detail";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$color: #00cc99;
+
+.header {
+  height: 200px;
+  background-color: #0069cc;
+}
+
+.footer {
+  height: 200px;
+  background-color: #00cc99;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  transition: all 0.5s;
+  &:hover {
+    width: 200px;
+    background-color: $color;
+  }
+}

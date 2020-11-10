@@ -1,0 +1,45 @@
+.blog__nav {
+    li {
+        margin-right: 48px;
+        @include lg {
+            margin-right: 32px;
+        }
+        @include md {
+            margin-right: 0;
+        }
+    }
+    a:hover {
+        opacity: .5;
+    }
+}
+
+.blog {
+    padding: 82px 0 156px 0;
+    @include lg {
+        padding: 40px 0 104px 0;
+    }
+    @include md {
+        padding: 24px 0 56px 0;
+    }
+    a:hover {
+        color: $dark;
+    }
+    &__list {
+        margin-bottom: 60px;
+        @include lg {
+            margin-bottom: 32px;
+        }
+        @include md {
+            margin-bottom: 26px;
+        }
+        &:last-child {
+            margin-bottom: 100px;
+            @include lg {
+                margin-bottom: 104px;
+            }
+            @include md {
+                margin-bottom: 39px;
+            }
+        }
+    }
+}

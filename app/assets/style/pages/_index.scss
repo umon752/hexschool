@@ -1,0 +1,205 @@
+.banner {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png");
+    @include bg-cover;
+    height: 840px;
+    @include lg {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-sm.png");
+    }
+    @include md {
+        height: 394px;
+    }
+}
+
+// 共用padding
+.about,.basic,.design,.recommend,.contact {
+    padding: 64px 0 80px 0;
+    @include lg {
+        padding: $spacer-10 0 $spacer-10 0;
+    }
+    @include md {
+        padding: $spacer-8 0 $spacer-8 0;
+    }
+}
+
+// 共用title
+.title {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin-bottom: 60px;
+    text-align: center;
+    @include lg {
+        font-size: $font-size-h4;
+        margin-bottom: $spacer-8;
+    }
+    @include md {
+        font-size: $font-size-h5;
+        margin-bottom: $spacer-5;
+    }
+}
+
+
+.about {
+    @include lg {
+        padding: auto 0 80px 0;
+        li:nth-child(2) {
+            order: -1;
+        }
+        li:nth-child(3) {
+            order: -1;
+        }
+    }
+    @include md {
+        padding: auto 0 52px 0;
+    }
+    li {
+        @include lg {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    img {
+        @include lg {
+            width: 80px;
+        }
+    }
+}
+
+
+.basic__item {
+    font-size: 48px;
+    @include lg {
+        font-size: 28px;
+    }
+    li:nth-child(2) {
+        a {
+            display: block;
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png");
+            @include bg-cover;
+        }
+        a:hover > img {
+            opacity: 0;
+        }
+        img {
+            transition: .5s;
+        }
+    }
+}
+.basic__item__title {
+    font-style: italic;
+    text-transform: uppercase;
+    &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        height: 48px;
+        width: 48px;
+        margin-right: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include lg {
+            height: 32px;
+            width: 32px;
+        }
+        @include md {
+            height: 32px;
+            width: 32px;                
+        }
+    }
+    @include md {
+        position: absolute;
+    }
+}
+.basic__item--first::before {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg");
+    @include md {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond-white.svg");
+            
+    }
+}
+.basic__item--second::before {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun.svg");
+    @include md {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun-white.svg");
+    }
+}
+.basic__item--third::before {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg");
+    @include md {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-thunder-white.svg");
+    }
+}
+
+
+.design {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png");
+    @include bg-cover;
+    width: 100%;
+    background-position: center;
+    a:hover > h3 {
+        color: rgba(255, 255, 255, 0.678);
+    }
+    a:hover > img {
+        opacity: 1;
+    }
+    img {
+        opacity: 0.5;
+        transition: .5s;   
+    }
+    &__title {
+        font-size: 72px;
+        transition: .5s;
+        @include lg {
+            font-size: $font-size-h4;
+        }
+    } 
+}
+
+
+.recommend {
+    padding-bottom: 64px;
+    a:hover {
+        box-shadow: 0px 3px 10px 2px rgba(121, 121, 121, 0.226);
+    }
+    .card-body {
+        padding: 14px 16px;
+        @include lg {
+            padding: 16px;
+        }
+    }
+}
+
+
+.contact {
+    &__container {
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto;
+        @include lg {
+            max-width: 450px;
+        }
+        @include md {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    input,textarea {
+        border: 1px solid black;
+        padding: 14px 16px;
+        background-color: transparent;
+        @include lg {
+            padding: 8px 12px;
+        }
+    }
+    &__container--checkbox {
+        margin-bottom: 42px;
+        @include lg {
+            margin-bottom: 42px;
+        }
+        @include md {
+            margin-bottom: 24px;
+        }
+    }
+    button:hover {
+            background: $primary-dark;
+    }
+}
