@@ -2072,6 +2072,9 @@ footer a {
   .footer__copyright p {
     margin-bottom: 7px; } }
 
+.footer__copyright a:hover {
+  opacity: .5; }
+
 .footer__logo {
   margin-right: 38px; }
   @media (max-width: 767px) {
@@ -2208,7 +2211,10 @@ footer a {
   width: 100%;
   background-position: center; }
   .design a:hover > h3 {
-    color: rgba(255, 255, 255, 0.678); }
+    color: rgba(255, 255, 255, 0.678);
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px); }
   .design a:hover > img {
     opacity: 1; }
   .design img {
@@ -2229,7 +2235,10 @@ footer a {
   padding-bottom: 64px; }
   .recommend a:hover {
     -webkit-box-shadow: 0px 3px 10px 2px rgba(121, 121, 121, 0.226);
-            box-shadow: 0px 3px 10px 2px rgba(121, 121, 121, 0.226); }
+            box-shadow: 0px 3px 10px 2px rgba(121, 121, 121, 0.226);
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px); }
   .recommend .card-body {
     padding: 14px 16px; }
     @media (max-width: 1024px) {
@@ -2257,13 +2266,56 @@ footer a {
       padding: 8px 12px; } }
 
 .contact__container--checkbox {
-  margin-bottom: 42px; }
+  margin-bottom: 42px;
+  position: relative; }
   @media (max-width: 1024px) {
     .contact__container--checkbox {
       margin-bottom: 42px; } }
   @media (max-width: 767px) {
     .contact__container--checkbox {
       margin-bottom: 24px; } }
+  .contact__container--checkbox input {
+    position: relative;
+    cursor: pointer; }
+    .contact__container--checkbox input::after {
+      content: '';
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      background: white;
+      border: 1px solid #000;
+      display: block;
+      left: 0;
+      top: 0; }
+    .contact__container--checkbox input:checked::after {
+      background: #AA0601;
+      border: none; }
+    .contact__container--checkbox input:checked label::after, .contact__container--checkbox input ::before {
+      display: block; }
+  .contact__container--checkbox label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    top: 9px;
+    -webkit-transform: skew(0deg, 50deg);
+        -ms-transform: skew(0deg, 50deg);
+            transform: skew(0deg, 50deg);
+    background: white;
+    left: 7px; }
+  .contact__container--checkbox label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    left: 10px;
+    top: 9px;
+    background: white;
+    -webkit-transform: skew(0deg, -50deg);
+        -ms-transform: skew(0deg, -50deg);
+            transform: skew(0deg, -50deg); }
 
 .contact button:hover {
   background: #6d0401; }
@@ -2516,8 +2568,25 @@ footer a {
   @media (max-width: 767px) {
     .blog {
       padding: 24px 0 56px 0; } }
-  .blog a:hover {
-    color: #111619; }
+  .blog a {
+    position: relative; }
+    .blog a::before {
+      content: '';
+      position: absolute;
+      border-bottom: 3px solid #AA0601;
+      width: 0;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+    .blog a:hover::before {
+      width: 100%;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      opacity: 1; }
   .blog__list {
     margin-bottom: 60px; }
     @media (max-width: 1024px) {
