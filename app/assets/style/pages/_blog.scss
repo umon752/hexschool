@@ -21,8 +21,23 @@
     @include md {
         padding: 24px 0 56px 0;
     }
-    a:hover {
-        color: $dark;
+    a {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            border-bottom: 3px solid $primary;
+            width: 0;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        &:hover::before {
+            width: 100%;
+            transition: 0.5s;
+            opacity: 1;
+        }
     }
     &__list {
         margin-bottom: 60px;
