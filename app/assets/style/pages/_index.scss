@@ -51,15 +51,15 @@
     @include md {
         padding: auto 0 52px 0;
     }
-    li {
+    &__item {
         @include lg {
             padding-left: 60px;
             padding-right: 60px;
         }
-    }
-    img {
-        @include lg {
-            width: 80px;
+        img {
+            @include lg {
+                width: 80px;
+            }
         }
     }
 }
@@ -70,13 +70,11 @@
     @include lg {
         font-size: 28px;
     }
-    li:nth-child(2) {
-        a {
-            display: block;
-            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png");
-            @include bg-cover;
-        }
-        a:hover > img {
+    &--sun {
+        display: block;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png");
+        @include bg-cover;
+        &:hover > img {
             opacity: 0;
         }
         img {
@@ -109,20 +107,20 @@
         position: absolute;
     }
 }
-.basic__item--first::before {
+.basic__item__title--opt::before {
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg");
     @include md {
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond-white.svg");
             
     }
 }
-.basic__item--second::before {
+.basic__item__title--sun::before {
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun.svg");
     @include md {
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun-white.svg");
     }
 }
-.basic__item--third::before {
+.basic__item__title--fun::before {
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg");
     @include md {
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-thunder-white.svg");
@@ -135,22 +133,24 @@
     @include bg-cover;
     width: 100%;
     background-position: center;
-    a:hover > h3 {
-        color: rgba(255, 255, 255, 0.678);
-        transform: translateY(-5px);
-    }
-    a:hover > img {
-        opacity: 1;
-    }
-    img {
-        opacity: 0.5;
-        transition: .5s;   
-    }
-    &__title {
-        font-size: 72px;
-        transition: .5s;
-        @include lg {
-            font-size: $font-size-h4;
+    &__item {
+        a:hover > h3 {
+            color: rgba(255, 255, 255, 0.678);
+            transform: translateY(-5px);
+        }
+        a:hover > img {
+            opacity: 1;
+        }
+        img {
+            opacity: 0.5;
+            transition: .5s;   
+        }
+        &__title {
+            font-size: 72px;
+            transition: .5s;
+            @include lg {
+                font-size: $font-size-h4;
+            }
         }
     } 
 }

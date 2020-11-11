@@ -2,121 +2,120 @@ footer {
     a {
         color: white;
     }
-}
-
-.footer__nav {
-    img {
-        transition: all ease 300ms;
-        &:hover {
-            opacity: 0.5;
-        }
-        @include lg {
-            width: 24px;
-        }
-    }
-    @include md {
-        float: right;
-    }
-}
-.footer__nav__menu {
-    position: relative;
-    margin-right: 48px;
-    @include lg {
-        margin-right: $spacer-10;
-    }
-    a {
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -3px;
-            height: 3px;
-            width: 0;
-            background-color: $light;
-            transition: all 0.25s ease;
-            transform: translate(-50%);
-        }
-        &:hover::after {
-            width: 100%;
-        }
-    }
-}
-.footer__info {
-    padding-bottom: 22px;
-    border-bottom: 1px solid white;
-    line-height: 48px;
-    font-size: 42px;
-    @include lg {
-        padding-bottom: 27px;
-        line-height: 26px;
-        font-size: $font-size-h6;
-    }
-    @include md {
-        padding-bottom: $spacer-6;
-        line-height: 21px;
-        margin-bottom: 18px;
-        font-size: $font-size-m;
-    }
-    a:hover {
-        opacity: 0.5;
-    }
-}
-.footer__info__list {
-    margin-bottom: 17px;
-    @include lg {
-        margin-bottom: 11px;
-    }
-    @include md {
-        margin-bottom: 7px;
-    }
-    &:first-child {
+    .nav {
         img {
-            padding: 0 6px;
+            transition: all ease 300ms;
+            &:hover {
+                opacity: 0.5;
+            }
             @include lg {
-                padding: 0 5px;
+                width: 24px;
             }
-            @include md {
-                padding: 0 2px;
-            }
-        }
-    }
-}
-.footer__info__list__icon {
-    margin-right: 14px;
-    @include lg {
-        width: 28px;
-        margin-right: 10px;
-    }
-    @include md {
-        width: 16px;
-    }
-}
-.footer__copyright {
-    li {
-        margin-left: 62px;
-        &:first-child {
-            margin-left: 0;
-        }
-        @include lg {
-            margin-left: $spacer-6;
         }
         @include md {
-            margin-left: 0;
+            float: right;
         }
     }
-    p {
+    .nav__menu {
+        position: relative;
+        margin-right: 48px;
+        @include lg {
+            margin-right: $spacer-10;
+        }
+        a {
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -3px;
+                height: 3px;
+                width: 0;
+                background-color: $light;
+                transition: all 0.25s ease;
+                transform: translate(-50%);
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+    .info {
+        padding-bottom: 22px;
+        border-bottom: 1px solid white;
+        line-height: 48px;
+        font-size: 42px;
+        @include lg {
+            padding-bottom: 27px;
+            line-height: 26px;
+            font-size: $font-size-h6;
+        }
+        @include md {
+            padding-bottom: $spacer-6;
+            line-height: 21px;
+            margin-bottom: 18px;
+            font-size: $font-size-m;
+        }
+        a:hover {
+            opacity: 0.5;
+        }
+    }
+    .info__list {
+        margin-bottom: 17px;
+        @include lg {
+            margin-bottom: 11px;
+        }
         @include md {
             margin-bottom: 7px;
         }
+        &:first-child {
+            img {
+                padding: 0 6px;
+                @include lg {
+                    padding: 0 5px;
+                }
+                @include md {
+                    padding: 0 2px;
+                }
+            }
+        }
+        &__icon {
+            margin-right: 14px;
+            @include lg {
+                width: 28px;
+                margin-right: 10px;
+            }
+            @include md {
+                width: 16px;
+            }
+        }
     }
-    a:hover {
-        opacity: .5;
+    .copyright {
+        &__item {
+            margin-left: 62px;
+            &:first-child {
+                margin-left: 0;
+            }
+            @include lg {
+                margin-left: $spacer-6;
+            }
+            @include md {
+                margin-left: 0;
+            }
+        }
+        p {
+            @include md {
+                margin-bottom: 7px;
+            }
+        }
+        a:hover {
+            opacity: .5;
+        }
     }
-}
-.footer__logo {
-    margin-right: 38px;
-    @include md {
-        width: 46px;
-        margin-right: 0;
+    .logo {
+        margin-right: 38px;
+        @include md {
+            width: 46px;
+            margin-right: 0;
+        }
     }
 }

@@ -1,60 +1,3 @@
-.products__nav {
-    max-width: 1386px;
-    width: 100%;
-    margin: 0 auto;
-    li {
-        border: 1px solid #DCDCDC;
-    }
-    img {
-        height: 48px;
-        @include lg {
-            height: 32px;
-        }
-        @include md {
-            height: 14px;
-        }
-    }
-    a {
-        padding: 24px 0;
-        position: relative;
-        font-size: 42px;
-        @include lg {
-            padding: 16px 0;
-            font-size: 28px;
-        }
-        @include md {
-            padding: 8px 0;
-            font-size: $font-size-s;
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            border-bottom: 16px solid $primary;
-            width: 0;
-            opacity: 0;
-            bottom: 0;
-            left: 0;
-            transition: 0.5s;
-            @include lg {
-                border-bottom-width: 8px;
-            }
-            @include md {
-                border-bottom-width: 4px;
-            }
-        }
-        &:hover::before {
-            width: 100%;
-            transition: 0.5s;
-            opacity: 1;
-        }
-    }
-    .active > a::before {
-        width: 100%;
-        opacity: 1;
-    }
-}
-
-
 .products__banner {
     &__optical--item1,&__optical--item2,&__sun--item1,&__sun--item2 {
         height: 309px;
@@ -94,7 +37,7 @@
     }
 }
 
-.products {
+.products__content {
     padding: 88px 0 156px 0;
     @include lg {
         padding: 40px 0 104px 0;
@@ -104,7 +47,7 @@
     }
 }
 
-.products__list {
+.products__content__list {
     margin-bottom: 100px;
     @include lg {
         margin-bottom: 105px;
@@ -123,7 +66,7 @@
             font-size: $font-size-h6;
         }
     }
-    &__content {
+    &__item {
         margin-bottom: 104px;
         width: 100%;
         @include lg {
@@ -136,7 +79,7 @@
             color: black;
         }
     }
-    &__content--color {
+    &__item--color {
         width: 24px;
         height: 24px;
         border-radius: 4px;

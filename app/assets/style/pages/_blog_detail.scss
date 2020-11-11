@@ -1,4 +1,4 @@
-.blogDetail {
+.blogDetail__content {
     padding: 8px 0 304px 0;
     @include md {
         padding-bottom: 56px;
@@ -81,7 +81,7 @@
     }
 }
 
-.blogDetail__tag {
+.blogDetail__content__tag {
     a {
         color: $primary;
         &:hover {
@@ -109,7 +109,7 @@
     }
 }
 
-.blogDetail__breadcrumbs {
+.blogDetail__content__breadcrumbs {
     margin-bottom: 17px;
     @include md {
         margin-bottom: 6px;

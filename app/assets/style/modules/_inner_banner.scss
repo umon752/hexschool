@@ -1,0 +1,22 @@
+.inner__banner {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/qa.png");
+    @include bg-cover;
+    height: 304px;
+    @include md {
+        height: 143px;
+    }
+    &__title {
+        @include md {
+            font-size: 28px;
+        }
+    }
+    &--icon {
+        width: 40px;
+        @include lg {
+            width: 30px;
+        }
+        @include md {
+            width: 16px;
+        }
+    }
+}

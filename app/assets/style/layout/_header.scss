@@ -6,13 +6,6 @@
         @include md {
             padding: 10px 0 0 0;
         }
-    a {
-        display: inline-block;
-        color: white;
-        @include md {
-            display: block;
-        }
-    }
     .logo {
         @include md {
             width: 48px;
