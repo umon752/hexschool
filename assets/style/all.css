@@ -1919,6 +1919,80 @@ button {
       background: black;
       color: white; }
 
+.products__nav {
+  max-width: 1386px;
+  width: 100%;
+  margin: 0 auto; }
+  .products__nav li {
+    border: 1px solid #DCDCDC; }
+  .products__nav img {
+    height: 48px; }
+    @media (max-width: 1024px) {
+      .products__nav img {
+        height: 32px; } }
+    @media (max-width: 767px) {
+      .products__nav img {
+        height: 14px; } }
+  .products__nav a {
+    padding: 24px 0;
+    position: relative;
+    font-size: 42px; }
+    @media (max-width: 1024px) {
+      .products__nav a {
+        padding: 16px 0;
+        font-size: 28px; } }
+    @media (max-width: 767px) {
+      .products__nav a {
+        padding: 8px 0;
+        font-size: 0.875rem; } }
+    .products__nav a::before {
+      content: '';
+      position: absolute;
+      border-bottom: 16px solid #AA0601;
+      width: 0;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      @media (max-width: 1024px) {
+        .products__nav a::before {
+          border-bottom-width: 8px; } }
+      @media (max-width: 767px) {
+        .products__nav a::before {
+          border-bottom-width: 4px; } }
+    .products__nav a:hover::before {
+      width: 100%;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      opacity: 1; }
+  .products__nav .active > a::before {
+    width: 100%;
+    opacity: 1; }
+
+.inner__banner {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/qa.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 304px; }
+  @media (max-width: 767px) {
+    .inner__banner {
+      height: 143px; } }
+  @media (max-width: 767px) {
+    .inner__banner__title {
+      font-size: 28px; } }
+  .inner__banner--icon {
+    width: 40px; }
+    @media (max-width: 1024px) {
+      .inner__banner--icon {
+        width: 30px; } }
+    @media (max-width: 767px) {
+      .inner__banner--icon {
+        width: 16px; } }
+
 .navbar {
   padding: 30px 88px; }
   @media (max-width: 1024px) {
@@ -1927,12 +2001,6 @@ button {
   @media (max-width: 767px) {
     .navbar {
       padding: 10px 0 0 0; } }
-  .navbar a {
-    display: inline-block;
-    color: white; }
-    @media (max-width: 767px) {
-      .navbar a {
-        display: block; } }
   @media (max-width: 767px) {
     .navbar .logo {
       width: 48px;
@@ -1974,27 +2042,27 @@ button {
 footer a {
   color: white; }
 
-.footer__nav img {
+footer .nav img {
   -webkit-transition: all ease 300ms;
   -o-transition: all ease 300ms;
   transition: all ease 300ms; }
-  .footer__nav img:hover {
+  footer .nav img:hover {
     opacity: 0.5; }
   @media (max-width: 1024px) {
-    .footer__nav img {
+    footer .nav img {
       width: 24px; } }
 
 @media (max-width: 767px) {
-  .footer__nav {
+  footer .nav {
     float: right; } }
 
-.footer__nav__menu {
+footer .nav__menu {
   position: relative;
   margin-right: 48px; }
   @media (max-width: 1024px) {
-    .footer__nav__menu {
+    footer .nav__menu {
       margin-right: 40px; } }
-  .footer__nav__menu a::after {
+  footer .nav__menu a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -2008,77 +2076,76 @@ footer a {
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
-  .footer__nav__menu a:hover::after {
+  footer .nav__menu a:hover::after {
     width: 100%; }
 
-.footer__info {
+footer .info {
   padding-bottom: 22px;
   border-bottom: 1px solid white;
   line-height: 48px;
   font-size: 42px; }
   @media (max-width: 1024px) {
-    .footer__info {
+    footer .info {
       padding-bottom: 27px;
       line-height: 26px;
       font-size: 1.25rem; } }
   @media (max-width: 767px) {
-    .footer__info {
+    footer .info {
       padding-bottom: 24px;
       line-height: 21px;
       margin-bottom: 18px;
       font-size: 1rem; } }
-  .footer__info a:hover {
+  footer .info a:hover {
     opacity: 0.5; }
 
-.footer__info__list {
+footer .info__list {
   margin-bottom: 17px; }
   @media (max-width: 1024px) {
-    .footer__info__list {
+    footer .info__list {
       margin-bottom: 11px; } }
   @media (max-width: 767px) {
-    .footer__info__list {
+    footer .info__list {
       margin-bottom: 7px; } }
-  .footer__info__list:first-child img {
+  footer .info__list:first-child img {
     padding: 0 6px; }
     @media (max-width: 1024px) {
-      .footer__info__list:first-child img {
+      footer .info__list:first-child img {
         padding: 0 5px; } }
     @media (max-width: 767px) {
-      .footer__info__list:first-child img {
+      footer .info__list:first-child img {
         padding: 0 2px; } }
+  footer .info__list__icon {
+    margin-right: 14px; }
+    @media (max-width: 1024px) {
+      footer .info__list__icon {
+        width: 28px;
+        margin-right: 10px; } }
+    @media (max-width: 767px) {
+      footer .info__list__icon {
+        width: 16px; } }
 
-.footer__info__list__icon {
-  margin-right: 14px; }
-  @media (max-width: 1024px) {
-    .footer__info__list__icon {
-      width: 28px;
-      margin-right: 10px; } }
-  @media (max-width: 767px) {
-    .footer__info__list__icon {
-      width: 16px; } }
-
-.footer__copyright li {
+footer .copyright__item {
   margin-left: 62px; }
-  .footer__copyright li:first-child {
+  footer .copyright__item:first-child {
     margin-left: 0; }
   @media (max-width: 1024px) {
-    .footer__copyright li {
+    footer .copyright__item {
       margin-left: 24px; } }
   @media (max-width: 767px) {
-    .footer__copyright li {
+    footer .copyright__item {
       margin-left: 0; } }
 
 @media (max-width: 767px) {
-  .footer__copyright p {
+  footer .copyright p {
     margin-bottom: 7px; } }
 
-.footer__copyright a:hover {
+footer .copyright a:hover {
   opacity: .5; }
 
-.footer__logo {
+footer .logo {
   margin-right: 38px; }
   @media (max-width: 767px) {
-    .footer__logo {
+    footer .logo {
       width: 46px;
       margin-right: 0; } }
 
@@ -2135,12 +2202,12 @@ footer a {
     padding: auto 0 52px 0; } }
 
 @media (max-width: 1024px) {
-  .about li {
+  .about__item {
     padding-left: 60px;
     padding-right: 60px; } }
 
 @media (max-width: 1024px) {
-  .about img {
+  .about__item img {
     width: 80px; } }
 
 .basic__item {
@@ -2148,18 +2215,18 @@ footer a {
   @media (max-width: 1024px) {
     .basic__item {
       font-size: 28px; } }
-  .basic__item li:nth-child(2) a {
+  .basic__item--sun {
     display: block;
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
-  .basic__item li:nth-child(2) a:hover > img {
-    opacity: 0; }
-  .basic__item li:nth-child(2) img {
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
+    .basic__item--sun:hover > img {
+      opacity: 0; }
+    .basic__item--sun img {
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
 
 .basic__item__title {
   font-style: italic;
@@ -2185,22 +2252,22 @@ footer a {
     .basic__item__title {
       position: absolute; } }
 
-.basic__item--first::before {
+.basic__item__title--opt::before {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg"); }
   @media (max-width: 767px) {
-    .basic__item--first::before {
+    .basic__item__title--opt::before {
       background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond-white.svg"); } }
 
-.basic__item--second::before {
+.basic__item__title--sun::before {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun.svg"); }
   @media (max-width: 767px) {
-    .basic__item--second::before {
+    .basic__item__title--sun::before {
       background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun-white.svg"); } }
 
-.basic__item--third::before {
+.basic__item__title--fun::before {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg"); }
   @media (max-width: 767px) {
-    .basic__item--third::before {
+    .basic__item__title--fun::before {
       background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-thunder-white.svg"); } }
 
 .design {
@@ -2210,25 +2277,25 @@ footer a {
   background-repeat: no-repeat;
   width: 100%;
   background-position: center; }
-  .design a:hover > h3 {
+  .design__item a:hover > h3 {
     color: rgba(255, 255, 255, 0.678);
     -webkit-transform: translateY(-5px);
         -ms-transform: translateY(-5px);
             transform: translateY(-5px); }
-  .design a:hover > img {
+  .design__item a:hover > img {
     opacity: 1; }
-  .design img {
+  .design__item img {
     opacity: 0.5;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
-  .design__title {
+  .design__item__title {
     font-size: 72px;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
     @media (max-width: 1024px) {
-      .design__title {
+      .design__item__title {
         font-size: 2rem; } }
 
 .recommend {
@@ -2320,59 +2387,6 @@ footer a {
 .contact button:hover {
   background: #6d0401; }
 
-.products__nav {
-  max-width: 1386px;
-  width: 100%;
-  margin: 0 auto; }
-  .products__nav li {
-    border: 1px solid #DCDCDC; }
-  .products__nav img {
-    height: 48px; }
-    @media (max-width: 1024px) {
-      .products__nav img {
-        height: 32px; } }
-    @media (max-width: 767px) {
-      .products__nav img {
-        height: 14px; } }
-  .products__nav a {
-    padding: 24px 0;
-    position: relative;
-    font-size: 42px; }
-    @media (max-width: 1024px) {
-      .products__nav a {
-        padding: 16px 0;
-        font-size: 28px; } }
-    @media (max-width: 767px) {
-      .products__nav a {
-        padding: 8px 0;
-        font-size: 0.875rem; } }
-    .products__nav a::before {
-      content: '';
-      position: absolute;
-      border-bottom: 16px solid #AA0601;
-      width: 0;
-      opacity: 0;
-      bottom: 0;
-      left: 0;
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s; }
-      @media (max-width: 1024px) {
-        .products__nav a::before {
-          border-bottom-width: 8px; } }
-      @media (max-width: 767px) {
-        .products__nav a::before {
-          border-bottom-width: 4px; } }
-    .products__nav a:hover::before {
-      width: 100%;
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
-      opacity: 1; }
-  .products__nav .active > a::before {
-    width: 100%;
-    opacity: 1; }
-
 .products__banner__optical--item1, .products__banner__optical--item2, .products__banner__sun--item1, .products__banner__sun--item2 {
   height: 309px;
   width: 100%;
@@ -2411,57 +2425,57 @@ footer a {
     .products__banner__sun--item2 {
       margin-left: 0; } }
 
-.products {
+.products__content {
   padding: 88px 0 156px 0; }
   @media (max-width: 1024px) {
-    .products {
+    .products__content {
       padding: 40px 0 104px 0; } }
   @media (max-width: 767px) {
-    .products {
+    .products__content {
       padding: 30px 0 56px 0; } }
 
-.products__list {
+.products__content__list {
   margin-bottom: 100px; }
   @media (max-width: 1024px) {
-    .products__list {
+    .products__content__list {
       margin-bottom: 105px; } }
   @media (max-width: 767px) {
-    .products__list {
+    .products__content__list {
       margin-bottom: 40px; } }
-  .products__list__title {
+  .products__content__list__title {
     font-size: 42px;
     font-weight: 500;
     text-align: center; }
     @media (max-width: 1024px) {
-      .products__list__title {
+      .products__content__list__title {
         font-size: 2rem; } }
     @media (max-width: 767px) {
-      .products__list__title {
+      .products__content__list__title {
         font-size: 1.25rem; } }
-  .products__list__content {
+  .products__content__list__item {
     margin-bottom: 104px;
     width: 100%; }
     @media (max-width: 1024px) {
-      .products__list__content {
+      .products__content__list__item {
         margin-bottom: 72px; } }
     @media (max-width: 767px) {
-      .products__list__content {
+      .products__content__list__item {
         margin-bottom: 32px; } }
-    .products__list__content a {
+    .products__content__list__item a {
       color: black; }
-  .products__list__content--color {
+  .products__content__list__item--color {
     width: 24px;
     height: 24px;
     border-radius: 4px;
     margin-right: 8px; }
     @media (max-width: 767px) {
-      .products__list__content--color {
+      .products__content__list__item--color {
         width: 16px;
         height: 16px;
         margin-right: 4px; } }
-    .products__list__content--color:nth-child(1) {
+    .products__content__list__item--color:nth-child(1) {
       background: #5F3E2D; }
-    .products__list__content--color:nth-child(2) {
+    .products__content__list__item--color:nth-child(2) {
       background: #B75929; }
 
 .inner__banner {
@@ -2560,76 +2574,82 @@ footer a {
 .blog__nav a:hover {
   opacity: .5; }
 
-.blog {
+.blog__content {
   padding: 82px 0 156px 0; }
   @media (max-width: 1024px) {
-    .blog {
+    .blog__content {
       padding: 40px 0 104px 0; } }
   @media (max-width: 767px) {
-    .blog {
+    .blog__content {
       padding: 24px 0 56px 0; } }
-  .blog a {
-    position: relative; }
-    .blog a::before {
-      content: '';
-      position: absolute;
-      border-bottom: 3px solid #AA0601;
-      width: 0;
-      opacity: 0;
-      bottom: 0;
-      left: 0;
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s; }
-    .blog a:hover::before {
-      width: 100%;
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
-      opacity: 1; }
-  .blog__list {
+  .blog__content__item {
     margin-bottom: 60px; }
     @media (max-width: 1024px) {
-      .blog__list {
+      .blog__content__item {
         margin-bottom: 32px; } }
     @media (max-width: 767px) {
-      .blog__list {
+      .blog__content__item {
         margin-bottom: 26px; } }
-    .blog__list:last-child {
+    .blog__content__item:last-child {
       margin-bottom: 100px; }
       @media (max-width: 1024px) {
-        .blog__list:last-child {
+        .blog__content__item:last-child {
           margin-bottom: 104px; } }
       @media (max-width: 767px) {
-        .blog__list:last-child {
+        .blog__content__item:last-child {
           margin-bottom: 39px; } }
+    .blog__content__item__title a:hover {
+      cursor: inherit; }
+      @media (max-width: 1024px) {
+        .blog__content__item__title a:hover {
+          color: #AA0601;
+          cursor: pointer; } }
+    .blog__content__item__link a {
+      position: relative; }
+      .blog__content__item__link a::before {
+        content: '';
+        position: absolute;
+        border-bottom: 3px solid #AA0601;
+        width: 0;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+      .blog__content__item__link a:hover::before {
+        width: 100%;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        opacity: 1; }
 
-.blogDetail {
+.blogDetail__content {
   padding: 8px 0 304px 0; }
   @media (max-width: 767px) {
-    .blogDetail {
+    .blogDetail__content {
       padding-bottom: 56px; } }
   @media (max-width: 767px) {
-    .blogDetail__title {
+    .blogDetail__content__title {
       color: #AA0601; } }
-  .blogDetail__subtitle {
+  .blogDetail__content__subtitle {
     font-size: 28px; }
     @media (max-width: 767px) {
-      .blogDetail__subtitle {
+      .blogDetail__content__subtitle {
         font-size: 0.875rem; } }
-  .blogDetail__share {
+  .blogDetail__content__share {
     margin-top: 52px;
     border-bottom: 1px solid #707070; }
     @media (max-width: 767px) {
-      .blogDetail__share {
+      .blogDetail__content__share {
         margin-top: 30px; } }
-    .blogDetail__share img {
+    .blogDetail__content__share img {
       -webkit-transition: .5s;
       -o-transition: .5s;
       transition: .5s; }
-    .blogDetail__share a:hover > img {
+    .blogDetail__content__share a:hover > img {
       opacity: .6; }
-  .blogDetail__btn a:first-child::before {
+  .blogDetail__content__btn a:first-child::before {
     content: '';
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-undo.svg");
     width: 24px;
@@ -2638,10 +2658,10 @@ footer a {
     display: inline-block;
     margin-right: 8px; }
     @media (max-width: 767px) {
-      .blogDetail__btn a:first-child::before {
+      .blogDetail__content__btn a:first-child::before {
         width: 16px;
         height: 14px; } }
-  .blogDetail__btn a:last-child::before {
+  .blogDetail__content__btn a:last-child::before {
     content: '';
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-redo.svg");
     width: 24px;
@@ -2650,11 +2670,11 @@ footer a {
     display: none;
     margin-right: 8px; }
     @media (max-width: 767px) {
-      .blogDetail__btn a:last-child::before {
+      .blogDetail__content__btn a:last-child::before {
         width: 16px;
         height: 14px;
         display: inline-block; } }
-  .blogDetail__btn a:last-child::after {
+  .blogDetail__content__btn a:last-child::after {
     content: '';
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-redo.svg");
     width: 24px;
@@ -2663,24 +2683,24 @@ footer a {
     display: inline-block;
     margin-left: 8px; }
     @media (max-width: 767px) {
-      .blogDetail__btn a:last-child::after {
+      .blogDetail__content__btn a:last-child::after {
         width: 16px;
         height: 14px;
         display: none; } }
-  .blogDetail__btn a:hover {
+  .blogDetail__content__btn a:hover {
     opacity: .6; }
 
-.blogDetail__tag a {
+.blogDetail__content__tag a {
   color: #AA0601; }
-  .blogDetail__tag a:hover {
+  .blogDetail__content__tag a:hover {
     color: #770401; }
 
-.blogDetail__tag--title {
+.blogDetail__content__tag--title {
   font-size: 28px; }
   @media (max-width: 767px) {
-    .blogDetail__tag--title {
+    .blogDetail__content__tag--title {
       font-size: 20px; } }
-  .blogDetail__tag--title::before {
+  .blogDetail__content__tag--title::before {
     content: '';
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-tag.svg");
     width: 48px;
@@ -2689,25 +2709,25 @@ footer a {
     display: inline-block;
     margin-right: 8px; }
     @media (max-width: 767px) {
-      .blogDetail__tag--title::before {
+      .blogDetail__content__tag--title::before {
         width: 24px;
         height: 24px; } }
 
-.blogDetail__breadcrumbs {
+.blogDetail__content__breadcrumbs {
   margin-bottom: 17px; }
   @media (max-width: 767px) {
-    .blogDetail__breadcrumbs {
+    .blogDetail__content__breadcrumbs {
       margin-bottom: 6px; } }
-  .blogDetail__breadcrumbs li:not(:last-child)::after {
+  .blogDetail__content__breadcrumbs li:not(:last-child)::after {
     content: '/';
     margin: 0 5px; }
-  .blogDetail__breadcrumbs a {
+  .blogDetail__content__breadcrumbs a {
     color: black; }
-    .blogDetail__breadcrumbs a:hover {
+    .blogDetail__content__breadcrumbs a:hover {
       color: #555555; }
-  .blogDetail__breadcrumbs .active {
+  .blogDetail__content__breadcrumbs .active {
     color: #AA0601; }
-    .blogDetail__breadcrumbs .active:hover {
+    .blogDetail__content__breadcrumbs .active:hover {
       color: #AA0601; }
 
 .header {
