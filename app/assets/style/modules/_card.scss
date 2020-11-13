@@ -10,6 +10,7 @@
     img {
         width: 100%;
         height: auto;
+        object-fit: cover;
     }
     .card-body {
         padding: $spacer-3 $spacer-6;

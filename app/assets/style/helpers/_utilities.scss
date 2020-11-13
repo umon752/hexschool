@@ -44,9 +44,16 @@
 }
 
 // .text-align
-@each $key, $value in $text-aligns {
-    .text-#{$key} {
-        text-align: $value;
+@mixin text-aligns($breakpoint: null) {
+    @each $key, $value in $text-aligns {
+        @if ($breakpoint == null) {
+            .text-#{$key} {
+                text-align: $value;
+            }
+        }
+        .text#{$breakpoint}-#{$key} {
+            text-align: $value;
+        }
     }
 }
 
@@ -137,6 +144,7 @@
 @include display();
 @include width();
 @include font-weights();
+@include text-aligns();
 // pad
 @include lg {
     @include colors(-lg);
@@ -147,6 +155,7 @@
     @include display(-lg);
     @include width(-lg);
     @include font-weights(-lg);
+    @include text-aligns(-lg);
 }
 // phone
 @include md {
@@ -158,4 +167,5 @@
     @include display(-md);
     @include width(-md);
     @include font-weights(-md);
+    @include text-aligns(-md);
 }

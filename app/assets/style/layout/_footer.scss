@@ -18,10 +18,6 @@ footer {
     }
     .nav__menu {
         position: relative;
-        margin-right: 48px;
-        @include lg {
-            margin-right: $spacer-10;
-        }
         a {
             &::after {
                 content: '';
