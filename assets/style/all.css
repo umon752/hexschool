@@ -1842,11 +1842,6 @@ input[type=submit] {
   @media (max-width: 767px) {
     .card {
       margin-bottom: 16px; } }
-  .card img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover; }
   .card .card-body {
     padding: 12px 24px;
     border: 1px solid #00000020; }
@@ -1922,10 +1917,8 @@ input[type=submit] {
             transform: skew(0deg, -50deg); }
 
 .from-group input[type=submit] {
-  cursor: pointer;
   background: #AA0601;
-  border: 0;
-  font-size: 1rem; }
+  border: 0; }
   .from-group input[type=submit]:hover {
     background: #6d0401; }
 
