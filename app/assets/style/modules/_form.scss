@@ -63,10 +63,8 @@
         }
     }
     input[type=submit] {
-        cursor: pointer;
         background: $primary;
         border: 0;
-        font-size: $font-size-base;
         &:hover {
             background: $primary-dark;
         }
